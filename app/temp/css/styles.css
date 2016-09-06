@@ -6855,7 +6855,7 @@ button.close {
   font-size:18px;
 }
   .carousel-image-container {
-    background-image: url('/resources/images/banner-1.jpg');
+    background-image: url('/img/homepage/carousel/banner-1.jpg');
     background-repeat:no-repeat;
     background-size:100% 100%;
     width:100%;
@@ -6864,7 +6864,7 @@ button.close {
 
   #websites {
 
-    background-image: url('/resources/images/website-1.jpg');
+    background-image: url('/img/homepage/carousel/website-1.jpg');
   }
 
 

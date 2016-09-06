@@ -20,9 +20,9 @@ module.exports = function(grunt) {
       'options': {
         'sourceMap': true
       },
-      'dist': {
+      'react': {
         'files': {
-          "temp/jsx/scripts.jsx" : "temp/jsx/scripts.jsx"
+          "dev/js/react/scripts.jsx" : "temp/jsx/scripts.jsx"
         }
       }
     },
@@ -54,10 +54,40 @@ module.exports = function(grunt) {
     },
 
     copy: {
-      main:{
+      images:{
         expand: true,
-        src: 'resources/*',
-        dest: 'build/'
+        cwd: 'src',
+        src: 'img/**/*',
+        dest: 'dev/'
+      },
+      vendor: {
+        expand: true,
+        src: 'bower_components/**/*.min.*',
+        dest: 'dev/vendor/'
+
+      },
+      css: {
+        expand: true,
+        flatten: true,
+        src: 'src/css/**/*.css',
+        dest: 'dev/css/'
+      },
+
+      html: {
+        flatten: true,
+        expand: true,
+        src: 'src/index.html',
+        dest: 'dev/'
+      }
+    },
+
+    watch: {
+      dev: {
+        files: 'src/**/*',
+        tasks: ['concat','babel', 'cssmin','copy'],
+        options: {
+          livereload: true
+        }
       }
     }
 
@@ -71,7 +101,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-copy')
+  grunt.loadNpmTasks('grunt-contrib-watch');
   // Default task(s).
-  grunt.registerTask('default', ['concat', 'babel','uglify','cssmin','copy']);
+  grunt.registerTask('default', ['concat', 'babel','cssmin','copy']) ;
 
 };

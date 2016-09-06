@@ -6,5 +6,8 @@
     "Alex Alonso <alex.xmde@gmail.com>"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/alexxmde/jetscope-website"
+  "homepage": "https://github.com/alexxmde/jetscope-website",
+  "dependencies": {
+    "react": "^15.3.1"
+  }
 }

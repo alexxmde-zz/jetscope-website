@@ -1,5 +1,3 @@
-var React = require('../vendor/react/react.js');
-var ReactDOM = require('../vendor/react/react-dom.js');
 
 var NavbarHeader  = React.createClass({
   render: function () {
@@ -13,7 +11,7 @@ var NavbarHeader  = React.createClass({
       <span className="icon-bar"></span>
       </button>
       <a className="navbar-brand" id="navbar-brand" href="#">
-      <img id="logo-brand" src="/resources/images/jetscope.png" />
+      <img id="logo-brand" src="/img/header/jetscope.png" />
       <h1 id="brand-title">JetScope</h1>
       </a>
       </div>
